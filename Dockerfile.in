@@ -1,6 +1,7 @@
 FROM alpine
 
 RUN apk add git \
+	&& apk add nodejs \
 	&& apk add npm \
 	&& git clone https://github.com/Dimonmvp/docker-site.git \
 	&& cd docker-site \
