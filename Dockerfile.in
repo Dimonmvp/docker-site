@@ -1,14 +1,14 @@
 FROM alpine
 
 RUN apk add git \
-	&& apk add yarn \
+	&& apk add npm \
 	&& git clone https://github.com/Dimonmvp/docker-site.git \
 	&& cd docker-site \
-	&& yarn 
+	&& npm install
 
 WORKDIR ./docker-site
 
-CMD yarn start
+CMD npm start
 
 EXPOSE 3000
 
